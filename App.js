@@ -122,132 +122,21 @@ const CrateSimulator = () => {
     }
   ];
 
-  const styles = {
-    mainContainer: {
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #1f2937 0%, #111827 50%, #000000 100%)',
-      color: 'white',
-      padding: '2rem',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-    },
-    maxWidth: {
-      maxWidth: '80rem',
-      margin: '0 auto'
-    },
-    title: {
-      fontSize: '3rem',
-      fontWeight: 'bold',
-      marginBottom: '1rem',
-      background: 'linear-gradient(to right, #fbbf24, #f97316)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-      backgroundClip: 'text',
-      textAlign: 'center'
-    },
-    subtitle: {
-      color: '#9ca3af',
-      fontSize: '1.125rem',
-      textAlign: 'center',
-      marginBottom: '3rem'
-    },
-    grid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gap: '1.5rem'
-    },
-    card: {
-      backgroundColor: '#1f2937',
-      borderRadius: '0.5rem',
-      padding: '1.5rem',
-      border: '2px solid #374151',
-      cursor: 'pointer',
-      transition: 'all 0.3s'
-    },
-    cardHover: {
-      borderColor: '#fbbf24',
-      transform: 'scale(1.05)',
-      boxShadow: '0 20px 25px -5px rgba(251, 191, 36, 0.2)'
-    },
-    button: {
-      padding: '0.75rem 1.5rem',
-      borderRadius: '0.5rem',
-      fontWeight: 'bold',
-      cursor: 'pointer',
-      border: 'none',
-      transition: 'all 0.3s',
-      fontSize: '1rem'
-    },
-    buttonPrimary: {
-      background: 'linear-gradient(to right, #fbbf24, #f97316)',
-      color: 'black'
-    },
-    buttonSecondary: {
-      backgroundColor: '#374151',
-      color: 'white'
-    },
-    buttonDanger: {
-      backgroundColor: '#dc2626',
-      color: 'white'
-    },
-    input: {
-      padding: '0.75rem 1rem',
-      backgroundColor: '#111827',
-      border: '2px solid #374151',
-      borderRadius: '0.5rem',
-      width: '8rem',
-      textAlign: 'center',
-      fontSize: '1.25rem',
-      fontWeight: 'bold',
-      color: 'white'
-    },
-    statBox: {
-      backgroundColor: '#111827',
-      padding: '1rem',
-      borderRadius: '0.5rem',
-      textAlign: 'center'
-    },
-    resultCard: {
-      position: 'relative',
-      backgroundColor: '#111827',
-      borderRadius: '0.5rem',
-      padding: '1rem',
-      transition: 'all 0.3s'
-    },
-    countBadge: {
-      position: 'absolute',
-      top: '0.5rem',
-      right: '0.5rem',
-      backgroundColor: 'rgba(0, 0, 0, 0.7)',
-      padding: '0.25rem 0.5rem',
-      borderRadius: '0.25rem',
-      fontSize: '0.875rem',
-      fontWeight: 'bold'
-    },
-    rarityBadge: {
-      textAlign: 'center',
-      fontWeight: 'bold',
-      padding: '0.25rem 0.5rem',
-      borderRadius: '0.25rem',
-      fontSize: '0.75rem',
-      marginBottom: '0.25rem'
-    }
-  };
-
   const getRarityColor = (rarity) => {
     switch(rarity) {
-      case 'Grand': return 'linear-gradient(to right, #fbbf24, #f97316)';
-      case 'Elite': return 'linear-gradient(to right, #c084fc, #ec4899)';
-      case 'Rare': return 'linear-gradient(to right, #60a5fa, #06b6d4)';
-      default: return 'linear-gradient(to right, #9ca3af, #4b5563)';
+      case 'Grand': return 'from-yellow-400 to-orange-500';
+      case 'Elite': return 'from-purple-400 to-pink-500';
+      case 'Rare': return 'from-blue-400 to-cyan-500';
+      default: return 'from-gray-400 to-gray-600';
     }
   };
 
   const getRarityBorder = (rarity) => {
     switch(rarity) {
-      case 'Grand': return { border: '2px solid #fbbf24', boxShadow: '0 10px 15px -3px rgba(251, 191, 36, 0.5)' };
-      case 'Elite': return { border: '2px solid #c084fc', boxShadow: '0 10px 15px -3px rgba(192, 132, 252, 0.5)' };
-      case 'Rare': return { border: '2px solid #60a5fa', boxShadow: '0 10px 15px -3px rgba(96, 165, 250, 0.5)' };
-      default: return { border: '2px solid #6b7280', boxShadow: '0 10px 15px -3px rgba(107, 114, 128, 0.3)' };
+      case 'Grand': return 'border-yellow-400 shadow-yellow-400/50';
+      case 'Elite': return 'border-purple-400 shadow-purple-400/50';
+      case 'Rare': return 'border-blue-400 shadow-blue-400/50';
+      default: return 'border-gray-500 shadow-gray-500/30';
     }
   };
 
@@ -307,47 +196,39 @@ const CrateSimulator = () => {
 
   if (!selectedCrate) {
     return (
-      <div style={styles.mainContainer}>
-        <div style={styles.maxWidth}>
-          <div>
-            <h1 style={styles.title}>Loot Crate Simulator</h1>
-            <p style={styles.subtitle}>Select a crate to begin opening</p>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              Loot Crate Simulator
+            </h1>
+            <p className="text-gray-400 text-lg">Select a crate to begin opening</p>
           </div>
 
-          <div style={styles.grid}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {crates.map((crate, idx) => (
               <div
                 key={idx}
                 onClick={() => setSelectedCrate(crate.name)}
-                style={styles.card}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = '#fbbf24';
-                  e.currentTarget.style.transform = 'scale(1.05)';
-                  e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(251, 191, 36, 0.2)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = '#374151';
-                  e.currentTarget.style.transform = 'scale(1)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
+                className="bg-gray-800 rounded-lg p-6 border-2 border-gray-700 hover:border-yellow-500 transition-all cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20"
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                  <Package size={32} color="#fbbf24" />
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{crate.name}</h3>
+                <div className="flex items-center gap-3 mb-4">
+                  <Package className="w-8 h-8 text-yellow-400" />
+                  <h3 className="text-xl font-bold">{crate.name}</h3>
                 </div>
-                <p style={{ color: '#9ca3af', marginBottom: '1rem' }}>{crate.itemName}</p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ color: '#fbbf24' }}>◆ Grand</span>
+                <p className="text-gray-400 mb-4">{crate.itemName}</p>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-400">◆ Grand</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ color: '#c084fc' }}>◆ Elite</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-purple-400">◆ Elite</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ color: '#60a5fa' }}>◆ Rare</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-blue-400">◆ Rare</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ color: '#9ca3af' }}>◆ Junk</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-400">◆ Junk</span>
                   </div>
                 </div>
               </div>
@@ -362,62 +243,62 @@ const CrateSimulator = () => {
   const currentStats = statistics[selectedCrate] || {};
 
   return (
-    <div style={styles.mainContainer}>
-      <div style={styles.maxWidth}>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-8">
+      <div className="max-w-7xl mx-auto">
         <button
           onClick={() => setSelectedCrate(null)}
-          style={{ ...styles.button, ...styles.buttonSecondary, marginBottom: '1.5rem' }}
+          className="mb-6 px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
         >
           ← Back to Crate Selection
         </button>
 
-        <div style={{ ...styles.card, marginBottom: '2rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <Package size={48} color="#fbbf24" />
+        <div className="bg-gray-800 rounded-lg p-8 mb-8 border-2 border-gray-700">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-4">
+              <Package className="w-12 h-12 text-yellow-400" />
               <div>
-                <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold' }}>{selectedCrate}</h2>
-                <p style={{ color: '#9ca3af' }}>{currentCrate.itemName}</p>
+                <h2 className="text-3xl font-bold">{selectedCrate}</h2>
+                <p className="text-gray-400">{currentCrate.itemName}</p>
               </div>
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
-            <div style={styles.statBox}>
-              <p style={{ color: '#fbbf24', fontWeight: 'bold' }}>Grand</p>
-              <p style={{ fontSize: '1.5rem' }}>{currentCrate.grandProbability}%</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div className="bg-gray-900 p-4 rounded-lg text-center border-2 border-yellow-400/30">
+              <p className="text-yellow-400 font-bold">Grand</p>
+              <p className="text-sm text-gray-400 mt-1">Ultra Rare</p>
             </div>
-            <div style={styles.statBox}>
-              <p style={{ color: '#c084fc', fontWeight: 'bold' }}>Elite</p>
-              <p style={{ fontSize: '1.5rem' }}>{currentCrate.eliteProbability}%</p>
+            <div className="bg-gray-900 p-4 rounded-lg text-center border-2 border-purple-400/30">
+              <p className="text-purple-400 font-bold">Elite</p>
+              <p className="text-sm text-gray-400 mt-1">Very Rare</p>
             </div>
-            <div style={styles.statBox}>
-              <p style={{ color: '#60a5fa', fontWeight: 'bold' }}>Rare</p>
-              <p style={{ fontSize: '1.5rem' }}>{currentCrate.rareProbability}%</p>
+            <div className="bg-gray-900 p-4 rounded-lg text-center border-2 border-blue-400/30">
+              <p className="text-blue-400 font-bold">Rare</p>
+              <p className="text-sm text-gray-400 mt-1">Uncommon</p>
             </div>
-            <div style={styles.statBox}>
-              <p style={{ color: '#9ca3af', fontWeight: 'bold' }}>Junk</p>
-              <p style={{ fontSize: '1.5rem' }}>{(100 - currentCrate.grandProbability - currentCrate.eliteProbability - currentCrate.rareProbability).toFixed(2)}%</p>
+            <div className="bg-gray-900 p-4 rounded-lg text-center border-2 border-gray-600/30">
+              <p className="text-gray-400 font-bold">Junk</p>
+              <p className="text-sm text-gray-500 mt-1">Common</p>
             </div>
           </div>
 
-          <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <div className="flex gap-4 items-center">
             <input
               type="number"
               min="1"
               max="100"
               value={openAmount}
               onChange={(e) => setOpenAmount(Math.min(100, Math.max(1, parseInt(e.target.value) || 1)))}
-              style={styles.input}
+              className="px-4 py-3 bg-gray-900 border-2 border-gray-700 rounded-lg w-32 text-center text-xl font-bold"
             />
             <button
               onClick={openCrates}
               disabled={isOpening}
-              style={{
-                ...styles.button,
-                ...(isOpening ? { backgroundColor: '#4b5563', cursor: 'not-allowed' } : styles.buttonPrimary),
-                flex: 1
-              }}
+              className={`flex-1 px-6 py-3 rounded-lg font-bold text-lg transition-all ${
+                isOpening 
+                  ? 'bg-gray-600 cursor-not-allowed' 
+                  : 'bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 hover:scale-105'
+              }`}
             >
               {isOpening ? 'Opening...' : `Open ${openAmount} Crate${openAmount > 1 ? 's' : ''}`}
             </button>
@@ -425,55 +306,51 @@ const CrateSimulator = () => {
         </div>
 
         {currentStats.total > 0 && (
-          <div style={{ ...styles.card, marginBottom: '2rem' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <TrendingUp size={24} />
+          <div className="bg-gray-800 rounded-lg p-6 mb-8 border-2 border-gray-700">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-2xl font-bold flex items-center gap-2">
+                <TrendingUp className="w-6 h-6" />
                 Statistics
               </h3>
               <button
                 onClick={resetStats}
-                style={{ ...styles.button, ...styles.buttonDanger, padding: '0.5rem 1rem', fontSize: '0.875rem' }}
+                className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors text-sm"
               >
                 Reset Stats
               </button>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '1rem' }}>
-              <div style={styles.statBox}>
-                <p style={{ color: '#9ca3af', fontSize: '0.875rem' }}>Total Opens</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{currentStats.total}</p>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div className="bg-gray-900 p-4 rounded-lg text-center">
+                <p className="text-gray-400 text-sm">Total Opens</p>
+                <p className="text-2xl font-bold">{currentStats.total}</p>
               </div>
-              <div style={styles.statBox}>
-                <p style={{ color: '#fbbf24', fontSize: '0.875rem' }}>Grand</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{currentStats.Grand || 0}</p>
-                <p style={{ fontSize: '0.75rem', color: '#6b7280' }}>{((currentStats.Grand || 0) / currentStats.total * 100).toFixed(2)}%</p>
+              <div className="bg-gray-900 p-4 rounded-lg text-center">
+                <p className="text-yellow-400 text-sm">Grand</p>
+                <p className="text-2xl font-bold">{currentStats.Grand || 0}</p>
               </div>
-              <div style={styles.statBox}>
-                <p style={{ color: '#c084fc', fontSize: '0.875rem' }}>Elite</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{currentStats.Elite || 0}</p>
-                <p style={{ fontSize: '0.75rem', color: '#6b7280' }}>{((currentStats.Elite || 0) / currentStats.total * 100).toFixed(2)}%</p>
+              <div className="bg-gray-900 p-4 rounded-lg text-center">
+                <p className="text-purple-400 text-sm">Elite</p>
+                <p className="text-2xl font-bold">{currentStats.Elite || 0}</p>
               </div>
-              <div style={styles.statBox}>
-                <p style={{ color: '#60a5fa', fontSize: '0.875rem' }}>Rare</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{currentStats.Rare || 0}</p>
-                <p style={{ fontSize: '0.75rem', color: '#6b7280' }}>{((currentStats.Rare || 0) / currentStats.total * 100).toFixed(2)}%</p>
+              <div className="bg-gray-900 p-4 rounded-lg text-center">
+                <p className="text-blue-400 text-sm">Rare</p>
+                <p className="text-2xl font-bold">{currentStats.Rare || 0}</p>
               </div>
-              <div style={styles.statBox}>
-                <p style={{ color: '#9ca3af', fontSize: '0.875rem' }}>Junk</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{currentStats.Junk || 0}</p>
-                <p style={{ fontSize: '0.75rem', color: '#6b7280' }}>{((currentStats.Junk || 0) / currentStats.total * 100).toFixed(2)}%</p>
+              <div className="bg-gray-900 p-4 rounded-lg text-center">
+                <p className="text-gray-400 text-sm">Junk</p>
+                <p className="text-2xl font-bold">{currentStats.Junk || 0}</p>
               </div>
             </div>
           </div>
         )}
 
         {showResults && results.length > 0 && (
-          <div style={styles.card}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Award size={24} />
+          <div className="bg-gray-800 rounded-lg p-6 border-2 border-gray-700">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <Award className="w-6 h-6" />
               Results ({results.length} items)
             </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem' }}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {Object.entries(
                 results.reduce((acc, result) => {
                   const key = `${result.rarity}-${result.name}`;
@@ -486,25 +363,16 @@ const CrateSimulator = () => {
               ).map(([key, result]) => (
                 <div
                   key={key}
-                  style={{
-                    ...styles.resultCard,
-                    ...getRarityBorder(result.rarity)
-                  }}
+                  className={`bg-gray-900 rounded-lg p-4 border-2 ${getRarityBorder(result.rarity)} shadow-lg transition-all hover:scale-105 relative`}
                 >
-                  <div style={styles.countBadge}>
+                  <div className="absolute top-2 right-2 bg-black/70 px-2 py-1 rounded text-sm font-bold">
                     x{result.count}
                   </div>
                   {result.image ? (
                     <img 
                       src={result.image} 
                       alt={result.name}
-                      style={{
-                        width: '100%',
-                        height: '8rem',
-                        objectFit: 'contain',
-                        marginBottom: '0.5rem',
-                        borderRadius: '0.5rem'
-                      }}
+                      className="w-full h-32 object-contain mb-2 rounded"
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
@@ -512,32 +380,15 @@ const CrateSimulator = () => {
                     />
                   ) : null}
                   <div 
-                    style={{
-                      width: '100%',
-                      height: '8rem',
-                      backgroundColor: '#1f2937',
-                      borderRadius: '0.5rem',
-                      marginBottom: '0.5rem',
-                      display: result.image ? 'none' : 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center'
-                    }}
+                    className="w-full h-32 bg-gray-800 rounded mb-2 items-center justify-center"
+                    style={{ display: result.image ? 'none' : 'flex' }}
                   >
-                    <Package size={48} color="#4b5563" />
+                    <Package className="w-12 h-12 text-gray-600" />
                   </div>
-                  <div style={{
-                    ...styles.rarityBadge,
-                    background: getRarityColor(result.rarity)
-                  }}>
+                  <div className={`text-center font-bold px-2 py-1 rounded bg-gradient-to-r ${getRarityColor(result.rarity)} text-xs mb-1`}>
                     {result.rarity}
                   </div>
-                  <p style={{
-                    textAlign: 'center',
-                    fontSize: '0.875rem',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap'
-                  }}>{result.name}</p>
+                  <p className="text-center text-sm truncate">{result.name}</p>
                 </div>
               ))}
             </div>
