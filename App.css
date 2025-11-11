@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Main container styles */
+.min-h-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #000000 100%);
+  color: white;
+  padding: 2rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* Text styles */
+.text-5xl {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #fbbf24, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+/* Grid layouts */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card styles */
+.bg-gray-800 {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 2px solid #374151;
+}
+
+.bg-gray-900 {
+  background-color: #111827;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Button styles */
+button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+.bg-gray-700 {
+  background-color: #374151;
+  color: white;
+}
+
+.bg-gray-700:hover {
+  background-color: #4b5563;
+}
+
+.bg-gradient-orange {
+  background: linear-gradient(to right, #fbbf24, #f97316);
+  color: black;
+}
+
+.bg-gradient-orange:hover {
+  background: linear-gradient(to right, #fcd34d, #fb923c);
+  transform: scale(1.05);
+}
+
+.bg-red-600 {
+  background-color: #dc2626;
+  color: white;
+}
+
+.bg-red-600:hover {
+  background-color: #b91c1c;
+}
+
+button:disabled {
+  background-color: #4b5563;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Input styles */
+input[type="number"] {
+  padding: 0.75rem 1rem;
+  background-color: #111827;
+  border: 2px solid #374151;
+  border-radius: 0.5rem;
+  width: 8rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Flex utilities */
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* Spacing */
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+/* Text colors for rarities */
+.text-yellow-400 {
+  color: #fbbf24;
+}
+
+.text-purple-400 {
+  color: #c084fc;
+}
+
+.text-blue-400 {
+  color: #60a5fa;
+}
+
+/* Hover effects for cards */
+.hover-card {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hover-card:hover {
+  border-color: #fbbf24;
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.2);
+}
+
+/* Rarity borders */
+.border-yellow-400 {
+  border: 2px solid #fbbf24;
+  box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.5);
+}
+
+.border-purple-400 {
+  border: 2px solid #c084fc;
+  box-shadow: 0 10px 15px -3px rgba(192, 132, 252, 0.5);
+}
+
+.border-blue-400 {
+  border: 2px solid #60a5fa;
+  box-shadow: 0 10px 15px -3px rgba(96, 165, 250, 0.5);
+}
+
+.border-gray-500 {
+  border: 2px solid #6b7280;
+  box-shadow: 0 10px 15px -3px rgba(107, 114, 128, 0.3);
+}
+
+/* Rarity gradient backgrounds */
+.bg-gradient-yellow {
+  background: linear-gradient(to right, #fbbf24, #f97316);
+}
+
+.bg-gradient-purple {
+  background: linear-gradient(to right, #c084fc, #ec4899);
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(to right, #60a5fa, #06b6d4);
+}
+
+.bg-gradient-gray {
+  background: linear-gradient(to right, #9ca3af, #4b5563);
+}
+
+/* Result card styles */
+.result-card {
+  position: relative;
+  background-color: #111827;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.3s;
+}
+
+.result-card:hover {
+  transform: scale(1.05);
+}
+
+.result-card img {
+  width: 100%;
+  height: 8rem;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.result-card .count-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.result-card .rarity-badge {
+  text-align: center;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.result-card .item-name {
+  text-align: center;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Icon placeholder */
+.icon-placeholder {
+  width: 100%;
+  height: 8rem;
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Statistics percentage text */
+.text-gray-500 {
+  color: #6b7280;
+}
