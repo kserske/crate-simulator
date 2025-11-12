@@ -255,6 +255,30 @@ const CrateSimulator = () => {
       borderRadius: '0.5rem',
       padding: '1rem',
       transition: 'all 0.3s'
+    },
+    footer: {
+      marginTop: '3rem',
+      padding: '2rem',
+      backgroundColor: '#1f2937',
+      borderRadius: '0.5rem',
+      border: '2px solid #374151',
+      textAlign: 'center'
+    },
+    youtubeButton: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '0.5rem',
+      padding: '0.75rem 1.5rem',
+      backgroundColor: '#dc2626',
+      color: 'white',
+      borderRadius: '0.5rem',
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      border: 'none',
+      transition: 'all 0.3s',
+      textDecoration: 'none',
+      fontSize: '1rem',
+      marginTop: '1rem'
     }
   };
 
@@ -396,6 +420,32 @@ const CrateSimulator = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div style={styles.footer}>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Enjoying the Crate Simulator?</h3>
+            <p style={{ color: '#9ca3af', marginBottom: '1rem' }}>
+              Support the creator by subscribing to the YouTube channel or leaving a donation message in the comments!
+            </p>
+            <a 
+              href="https://www.youtube.com/c/Kserske" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={styles.youtubeButton}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#b91c1c';
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#dc2626';
+                e.currentTarget.style.transform = 'scale(1)';
+              }}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              Visit Kserske on YouTube
+            </a>
           </div>
         </div>
       </div>
