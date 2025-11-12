@@ -16,9 +16,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1RiJxrsASIqKwK3Xh7Xzrno4RWxQYnrq8",
       eliteImage: "https://drive.google.com/uc?export=view&id=1jvo8-BrN-FhxTIVDmk4DFfJfURO-QXIE",
       grandImage: "https://drive.google.com/uc?export=view&id=18bpDQHg5Ue7030XyWq6h7EPeS3vGrnFz",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 0.7,
       eliteProbability: 0.25,
-      grandProbability: 0.1
+      grandProbability: 0.1,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     },
     {
       name: "Investor's Crate",
@@ -26,9 +30,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1sExV2DrCm2LJ609tSnc93owzquf81azT",
       eliteImage: "https://drive.google.com/uc?export=view&id=1hy22-wTFYwHA6nJyZ1GXD2NWoypo7zI8",
       grandImage: "https://drive.google.com/uc?export=view&id=12L9ryQRF8_EYd0AyYhcDkD3tldu2Iprf",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 0.85,
       eliteProbability: 0.24,
-      grandProbability: 0.12
+      grandProbability: 0.12,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     },
     {
       name: "Valkyra Crate",
@@ -36,9 +44,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=11gsvnzWZTQ6GXtlH_iUDFZJVNJ5sgba2",
       eliteImage: "https://drive.google.com/uc?export=view&id=1_xcUnzH-oaoK8W8BG46b7Dr1QAu8itOE",
       grandImage: "https://drive.google.com/uc?export=view&id=1dSt_KbM7TdfyybOkE1bBHksuZOGlk_r-",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 0.7,
       eliteProbability: 0.34,
-      grandProbability: 0.05
+      grandProbability: 0.05,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     },
     {
       name: "Detective Crate",
@@ -46,9 +58,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1EvRCbYq_ZnRFjSk5K7UFdrxRbjHZdFjp",
       eliteImage: "https://drive.google.com/uc?export=view&id=14pWEi15P8AJWDGzHnVz3x4GW9C2T_8xU",
       grandImage: "https://drive.google.com/uc?export=view&id=1vJwDAKXb8IiU6pLYypcMSwk2l6VAkIVi",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 0.71,
       eliteProbability: 0.19,
-      grandProbability: 0.01
+      grandProbability: 0.01,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     },
     {
       name: "Merciless Rider Crate",
@@ -56,9 +72,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1c3Q65S_TJ2rx6MC3S0WzMQ7WwhrU4Z2P",
       eliteImage: "https://drive.google.com/uc?export=view&id=1R05LGndMM5oTP5M3ft_09ZJe3xonaZVc",
       grandImage: "https://drive.google.com/uc?export=view&id=1iWr89pfGBnOn7BZmkj83BrSN7Fr6W5Qd",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 0.75,
       eliteProbability: 0.34,
-      grandProbability: 0.05
+      grandProbability: 0.05,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     },
     {
       name: "Narc Dealer Crate",
@@ -66,9 +86,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1U9WBw7J1mKcd6rYjA1s9OUxRszau5tpg",
       eliteImage: "https://drive.google.com/uc?export=view&id=14pTrSCxtISot4voyuzIJSv9-kwqvuAHH",
       grandImage: "https://drive.google.com/uc?export=view&id=1f-PBBh4tY2MUOM_iqGPdt2Tu2fMppQX-",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 0.81,
       eliteProbability: 0.31,
-      grandProbability: 0.09
+      grandProbability: 0.09,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     },
     {
       name: "The Merc Crate",
@@ -76,9 +100,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1tClPC06UPNWFwpA2B6l9eesmvI9iOlWE",
       eliteImage: "https://drive.google.com/uc?export=view&id=1wAiJgV0m4Ej17s95KLycPRN69CVQnrfr",
       grandImage: "https://drive.google.com/uc?export=view&id=1nfYASS6r43ZanvNlCtPY_IkqcCCHy_o2",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 0.95,
       eliteProbability: 0.24,
-      grandProbability: 0.09
+      grandProbability: 0.09,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     },
     {
       name: "Mob Boss Crate",
@@ -86,9 +114,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1LgqFD5xmBOdGARhHQyq0gW7WUeksfcP2",
       eliteImage: "https://drive.google.com/uc?export=view&id=1mBJUXY_f51iVxMb_Uhsg3NfdPbdspmJd",
       grandImage: "https://drive.google.com/uc?export=view&id=1oddUrU_ceYJqVpg4wZEQmNkyfDp9c5sD",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 0.84,
       eliteProbability: 0.28,
-      grandProbability: 0.06
+      grandProbability: 0.06,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     },
     {
       name: "Legacy Crate",
@@ -96,9 +128,14 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1-vfqvt5Cjg0D3AaH25ZNa4Tv8-iAiI2v",
       eliteImage: "https://drive.google.com/uc?export=view&id=1R-G53R6a2MztL3JhH1C9Y4mKP1HnBmO_",
       grandImage: "https://drive.google.com/uc?export=view&id=1eCIuJX9f--2nD1XmuXIb9x7UzFAV64_2",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 2.57,
       eliteProbability: 0.96,
-      grandProbability: 1.39
+      grandProbability: 1.39,
+      simpleProbability: 20.0,
+      plainProbability: 75.08,
+      isLegacy: true
     },
     {
       name: "Challengers Crate",
@@ -106,9 +143,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1PLj2_981AT-Pv3pxrzRaCb27mx93MoIl",
       eliteImage: "https://drive.google.com/uc?export=view&id=18hy3MkRbJknrG1PnMUN8YVbl-pLPEJ2G",
       grandImage: "https://drive.google.com/uc?export=view&id=1dzNGHx-pJd-0uljoeP-OwXfu6eEV3D_b",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 1.19,
       eliteProbability: 0.28,
-      grandProbability: 0.04
+      grandProbability: 0.04,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     },
     {
       name: "Godfather's Crate",
@@ -116,9 +157,13 @@ const CrateSimulator = () => {
       rareImage: "https://drive.google.com/uc?export=view&id=1RZmD97erHOKzNclQMyAKrs3WmX5wSPWE",
       eliteImage: "https://drive.google.com/uc?export=view&id=1AqSjGZL4drDKojRrvo9DjzcC9fFBaMgL",
       grandImage: "https://drive.google.com/uc?export=view&id=1GBU--8pNYF50Hpj8IaBnA8C4_NLQogw_",
+      simpleImage: null,
+      plainImage: null,
       rareProbability: 0.26,
       eliteProbability: 0.07,
-      grandProbability: 0.04
+      grandProbability: 0.04,
+      simpleProbability: 1.0,
+      plainProbability: 1.0
     }
   ];
 
@@ -218,6 +263,9 @@ const CrateSimulator = () => {
       case 'Grand': return 'linear-gradient(to right, #fbbf24, #f97316)';
       case 'Elite': return 'linear-gradient(to right, #c084fc, #ec4899)';
       case 'Rare': return 'linear-gradient(to right, #60a5fa, #06b6d4)';
+      case 'Simple': return 'linear-gradient(to right, #10b981, #059669)';
+      case 'Plain': return 'linear-gradient(to right, #6b7280, #4b5563)';
+      case 'Junk': return 'linear-gradient(to right, #1f2937, #111827)';
       default: return 'linear-gradient(to right, #9ca3af, #4b5563)';
     }
   };
@@ -227,12 +275,16 @@ const CrateSimulator = () => {
       case 'Grand': return { border: '2px solid #fbbf24', boxShadow: '0 10px 15px -3px rgba(251, 191, 36, 0.5)' };
       case 'Elite': return { border: '2px solid #c084fc', boxShadow: '0 10px 15px -3px rgba(192, 132, 252, 0.5)' };
       case 'Rare': return { border: '2px solid #60a5fa', boxShadow: '0 10px 15px -3px rgba(96, 165, 250, 0.5)' };
+      case 'Simple': return { border: '2px solid #10b981', boxShadow: '0 10px 15px -3px rgba(16, 185, 129, 0.5)' };
+      case 'Plain': return { border: '2px solid #6b7280', boxShadow: '0 10px 15px -3px rgba(107, 114, 128, 0.3)' };
+      case 'Junk': return { border: '2px solid #374151', boxShadow: '0 10px 15px -3px rgba(55, 65, 81, 0.2)' };
       default: return { border: '2px solid #6b7280', boxShadow: '0 10px 15px -3px rgba(107, 114, 128, 0.3)' };
     }
   };
 
   const rollItem = (crate) => {
     const rand = Math.random() * 100;
+    const isLegacy = crate.isLegacy;
     
     if (rand < crate.grandProbability) {
       return { rarity: 'Grand', name: crate.itemName, image: crate.grandImage };
@@ -240,6 +292,12 @@ const CrateSimulator = () => {
       return { rarity: 'Elite', name: crate.itemName, image: crate.eliteImage };
     } else if (rand < crate.grandProbability + crate.eliteProbability + crate.rareProbability) {
       return { rarity: 'Rare', name: crate.itemName, image: crate.rareImage };
+    } else if (rand < crate.grandProbability + crate.eliteProbability + crate.rareProbability + crate.simpleProbability) {
+      const simpleName = isLegacy ? 'Simple Coin' : 'Simple Contract';
+      return { rarity: 'Simple', name: simpleName, image: crate.simpleImage };
+    } else if (rand < crate.grandProbability + crate.eliteProbability + crate.rareProbability + crate.simpleProbability + crate.plainProbability) {
+      const plainName = isLegacy ? 'Plain Coin' : 'Plain Contract';
+      return { rarity: 'Plain', name: plainName, image: crate.plainImage };
     } else {
       return { rarity: 'Junk', name: 'Junk Item', image: null };
     }
@@ -254,7 +312,7 @@ const CrateSimulator = () => {
 
     const crate = crates.find(c => c.name === selectedCrate);
     const newResults = [];
-    const stats = { Junk: 0, Rare: 0, Elite: 0, Grand: 0 };
+    const stats = { Junk: 0, Plain: 0, Simple: 0, Rare: 0, Elite: 0, Grand: 0 };
 
     for (let i = 0; i < openAmount; i++) {
       await new Promise(resolve => setTimeout(resolve, 50));
@@ -325,8 +383,16 @@ const CrateSimulator = () => {
                     <span style={{ color: '#60a5fa' }}>◆ Rare</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ color: '#9ca3af' }}>◆ Junk</span>
+                    <span style={{ color: '#10b981' }}>◆ Simple</span>
                   </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <span style={{ color: '#6b7280' }}>◆ Plain</span>
+                  </div>
+                  {!crate.isLegacy && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <span style={{ color: '#374151' }}>◆ Junk</span>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -355,7 +421,7 @@ const CrateSimulator = () => {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
             <div style={styles.statBox}>
               <p style={{ color: '#fbbf24', fontWeight: 'bold' }}>Grand</p>
               <p style={{ fontSize: '0.875rem', color: '#9ca3af' }}>Ultra Rare</p>
@@ -369,9 +435,19 @@ const CrateSimulator = () => {
               <p style={{ fontSize: '0.875rem', color: '#9ca3af' }}>Uncommon</p>
             </div>
             <div style={styles.statBox}>
-              <p style={{ color: '#9ca3af', fontWeight: 'bold' }}>Junk</p>
-              <p style={{ fontSize: '0.875rem', color: '#6b7280' }}>Common</p>
+              <p style={{ color: '#10b981', fontWeight: 'bold' }}>Simple</p>
+              <p style={{ fontSize: '0.875rem', color: '#9ca3af' }}>Uncommon</p>
             </div>
+            <div style={styles.statBox}>
+              <p style={{ color: '#6b7280', fontWeight: 'bold' }}>Plain</p>
+              <p style={{ fontSize: '0.875rem', color: '#9ca3af' }}>Common</p>
+            </div>
+            {!currentCrate.isLegacy && (
+              <div style={styles.statBox}>
+                <p style={{ color: '#374151', fontWeight: 'bold' }}>Junk</p>
+                <p style={{ fontSize: '0.875rem', color: '#6b7280' }}>Common</p>
+              </div>
+            )}
           </div>
 
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -428,10 +504,22 @@ const CrateSimulator = () => {
                 <p style={{ fontSize: '0.75rem', color: '#6b7280' }}>{((currentStats.Rare || 0) / currentStats.total * 100).toFixed(2)}%</p>
               </div>
               <div style={styles.statBox}>
-                <p style={{ color: '#9ca3af', fontSize: '0.875rem' }}>Junk</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{currentStats.Junk || 0}</p>
-                <p style={{ fontSize: '0.75rem', color: '#6b7280' }}>{((currentStats.Junk || 0) / currentStats.total * 100).toFixed(2)}%</p>
+                <p style={{ color: '#10b981', fontSize: '0.875rem' }}>Simple</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{currentStats.Simple || 0}</p>
+                <p style={{ fontSize: '0.75rem', color: '#6b7280' }}>{((currentStats.Simple || 0) / currentStats.total * 100).toFixed(2)}%</p>
               </div>
+              <div style={styles.statBox}>
+                <p style={{ color: '#6b7280', fontSize: '0.875rem' }}>Plain</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{currentStats.Plain || 0}</p>
+                <p style={{ fontSize: '0.75rem', color: '#6b7280' }}>{((currentStats.Plain || 0) / currentStats.total * 100).toFixed(2)}%</p>
+              </div>
+              {!currentCrate.isLegacy && (
+                <div style={styles.statBox}>
+                  <p style={{ color: '#374151', fontSize: '0.875rem' }}>Junk</p>
+                  <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{currentStats.Junk || 0}</p>
+                  <p style={{ fontSize: '0.75rem', color: '#6b7280' }}>{((currentStats.Junk || 0) / currentStats.total * 100).toFixed(2)}%</p>
+                </div>
+              )}
             </div>
           </div>
         )}
