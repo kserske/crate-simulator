@@ -358,19 +358,19 @@ const CrateSimulator = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
             <div style={styles.statBox}>
               <p style={{ color: '#fbbf24', fontWeight: 'bold' }}>Grand</p>
-              <p style={{ fontSize: '1.5rem' }}>{currentCrate.grandProbability}%</p>
+              <p style={{ fontSize: '0.875rem', color: '#9ca3af' }}>Ultra Rare</p>
             </div>
             <div style={styles.statBox}>
               <p style={{ color: '#c084fc', fontWeight: 'bold' }}>Elite</p>
-              <p style={{ fontSize: '1.5rem' }}>{currentCrate.eliteProbability}%</p>
+              <p style={{ fontSize: '0.875rem', color: '#9ca3af' }}>Very Rare</p>
             </div>
             <div style={styles.statBox}>
               <p style={{ color: '#60a5fa', fontWeight: 'bold' }}>Rare</p>
-              <p style={{ fontSize: '1.5rem' }}>{currentCrate.rareProbability}%</p>
+              <p style={{ fontSize: '0.875rem', color: '#9ca3af' }}>Uncommon</p>
             </div>
             <div style={styles.statBox}>
               <p style={{ color: '#9ca3af', fontWeight: 'bold' }}>Junk</p>
-              <p style={{ fontSize: '1.5rem' }}>{(100 - currentCrate.grandProbability - currentCrate.eliteProbability - currentCrate.rareProbability).toFixed(2)}%</p>
+              <p style={{ fontSize: '0.875rem', color: '#6b7280' }}>Common</p>
             </div>
           </div>
 
