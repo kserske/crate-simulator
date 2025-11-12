@@ -425,7 +425,7 @@ const CrateSimulator = () => {
           <div style={styles.footer}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Enjoying the Crate Simulator?</h3>
             <p style={{ color: '#9ca3af', marginBottom: '1rem' }}>
-              Support the creator by subscribing to the YouTube channel or leave a donation message in the comments!
+              Support the creator by subscribing to the YouTube channel or leaving a donation message in the comments!
             </p>
             <a 
               href="https://www.youtube.com/c/Kserske" 
@@ -500,24 +500,74 @@ const CrateSimulator = () => {
             )}
           </div>
 
-          <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <input
-              type="number"
-              min="1"
-              max="100"
-              value={openAmount}
-              onChange={(e) => setOpenAmount(Math.min(100, Math.max(1, parseInt(e.target.value) || 1)))}
-              style={styles.input}
-            />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <label style={{ fontSize: '1rem', fontWeight: 'bold' }}>Amount to Open:</label>
+              <input
+                type="text"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                value={openAmount}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (value === '') {
+                    setOpenAmount('');
+                  } else {
+                    const num = parseInt(value);
+                    if (!isNaN(num) && num >= 1 && num <= 100) {
+                      setOpenAmount(num);
+                    }
+                  }
+                }}
+                onBlur={(e) => {
+                  if (e.target.value === '' || parseInt(e.target.value) < 1) {
+                    setOpenAmount(1);
+                  }
+                }}
+                style={styles.input}
+                placeholder="1-100"
+              />
+            </div>
+            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+              {[1, 5, 10, 25, 50, 100].map(amount => (
+                <button
+                  key={amount}
+                  onClick={() => setOpenAmount(amount)}
+                  style={{
+                    padding: '0.5rem 1rem',
+                    borderRadius: '0.5rem',
+                    border: openAmount === amount ? '2px solid #fbbf24' : '2px solid #374151',
+                    backgroundColor: openAmount === amount ? '#374151' : '#1f2937',
+                    color: 'white',
+                    cursor: 'pointer',
+                    fontSize: '0.875rem',
+                    fontWeight: 'bold',
+                    transition: 'all 0.2s'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (openAmount !== amount) {
+                      e.currentTarget.style.borderColor = '#6b7280';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (openAmount !== amount) {
+                      e.currentTarget.style.borderColor = '#374151';
+                    }
+                  }}
+                >
+                  {amount}
+                </button>
+              ))}
+            </div>
             <button
               onClick={openCrates}
-              disabled={isOpening}
+              disabled={isOpening || !openAmount || openAmount < 1}
               style={{
                 ...styles.button,
-                ...(isOpening ? { backgroundColor: '#4b5563', cursor: 'not-allowed' } : styles.buttonOpen)
+                ...(isOpening || !openAmount || openAmount < 1 ? { backgroundColor: '#4b5563', cursor: 'not-allowed' } : styles.buttonOpen)
               }}
             >
-              {isOpening ? 'Opening...' : `Open ${openAmount} Crate${openAmount > 1 ? 's' : ''}`}
+              {isOpening ? 'Opening...' : `Open ${openAmount || 0} Crate${openAmount > 1 ? 's' : ''}`}
             </button>
           </div>
         </div>
