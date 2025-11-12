@@ -22,7 +22,7 @@ const CrateSimulator = () => {
       eliteProbability: 0.25,
       grandProbability: 0.1,
       simpleProbability: 1.0,
-      plainProbability: 1.0
+      plainProbability: 1.3
     },
     {
       name: "Investor's Crate",
@@ -36,7 +36,7 @@ const CrateSimulator = () => {
       eliteProbability: 0.24,
       grandProbability: 0.12,
       simpleProbability: 1.0,
-      plainProbability: 1.0
+      plainProbability: 1.3
     },
     {
       name: "Valkyra Crate",
@@ -50,7 +50,7 @@ const CrateSimulator = () => {
       eliteProbability: 0.34,
       grandProbability: 0.05,
       simpleProbability: 1.0,
-      plainProbability: 1.0
+      plainProbability: 1.4
     },
     {
       name: "Detective Crate",
@@ -64,7 +64,7 @@ const CrateSimulator = () => {
       eliteProbability: 0.19,
       grandProbability: 0.01,
       simpleProbability: 1.0,
-      plainProbability: 1.0
+      plainProbability: 1.4
     },
     {
       name: "Merciless Rider Crate",
@@ -78,7 +78,7 @@ const CrateSimulator = () => {
       eliteProbability: 0.34,
       grandProbability: 0.05,
       simpleProbability: 1.0,
-      plainProbability: 1.0
+      plainProbability: 1.5
     },
     {
       name: "Narc Dealer Crate",
@@ -92,7 +92,7 @@ const CrateSimulator = () => {
       eliteProbability: 0.31,
       grandProbability: 0.09,
       simpleProbability: 1.0,
-      plainProbability: 1.0
+      plainProbability: 1.5
     },
     {
       name: "The Merc Crate",
@@ -106,7 +106,7 @@ const CrateSimulator = () => {
       eliteProbability: 0.24,
       grandProbability: 0.09,
       simpleProbability: 1.0,
-      plainProbability: 1.0
+      plainProbability: 1.5
     },
     {
       name: "Mob Boss Crate",
@@ -120,7 +120,7 @@ const CrateSimulator = () => {
       eliteProbability: 0.28,
       grandProbability: 0.06,
       simpleProbability: 1.0,
-      plainProbability: 1.0
+      plainProbability: 1.5
     },
     {
       name: "Legacy Crate",
@@ -148,8 +148,8 @@ const CrateSimulator = () => {
       rareProbability: 1.19,
       eliteProbability: 0.28,
       grandProbability: 0.04,
-      simpleProbability: 1.0,
-      plainProbability: 1.0
+      simpleProbability: 1.3,
+      plainProbability: 1.5
     },
     {
       name: "Godfather's Crate",
@@ -162,7 +162,7 @@ const CrateSimulator = () => {
       rareProbability: 0.26,
       eliteProbability: 0.07,
       grandProbability: 0.04,
-      simpleProbability: 1.0,
+      simpleProbability: 0.7,
       plainProbability: 1.0
     }
   ];
