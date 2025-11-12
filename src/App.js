@@ -425,7 +425,7 @@ const CrateSimulator = () => {
           <div style={styles.footer}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Enjoying the Crate Simulator?</h3>
             <p style={{ color: '#9ca3af', marginBottom: '1rem' }}>
-              Support the creator by subscribing to the YouTube channel or leaving a donation message in the comments!
+              Support the creator by subscribing to the YouTube channel!
             </p>
             <a 
               href="https://www.youtube.com/c/Kserske" 
