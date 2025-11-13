@@ -173,8 +173,8 @@ const CrateSimulator = () => {
     rareProbability: 0.26,
     eliteProbability: 0.07,
     grandProbability: 0.04,
-    simpleProbability: 0.7,
-    plainProbability: 1.0
+    simpleProbability: 0.5,
+    plainProbability: 0.7
   }
 ];
 
@@ -329,10 +329,10 @@ const CrateSimulator = () => {
       return { rarity: 'Rare', name: crate.itemName, image: crate.rareImage };
     } else if (rand < crate.grandProbability + crate.eliteProbability + crate.rareProbability + crate.simpleProbability) {
       const simpleName = isLegacy ? 'Simple Coin' : 'Simple Contract';
-      return { rarity: 'Simple', name: simpleName, image: crate.simpleImage };
+      return { rarity: 'Simple', name: crate.itemName, image: crate.simpleImage };
     } else if (rand < crate.grandProbability + crate.eliteProbability + crate.rareProbability + crate.simpleProbability + crate.plainProbability) {
       const plainName = isLegacy ? 'Plain Coin' : 'Plain Contract';
-      return { rarity: 'Plain', name: plainName, image: crate.plainImage };
+      return { rarity: 'Plain', name: crate.itemName, image: crate.plainImage };
     } else {
       return { rarity: 'Junk', name: 'Junk Item', image: null };
     }
