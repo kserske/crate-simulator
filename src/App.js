@@ -10,162 +10,173 @@ const CrateSimulator = () => {
   const [statistics, setStatistics] = useState({});
 
   const crates = [
-    {
-      name: "Architect's Crate",
-      itemName: "Architect's Contract",
-      rareImage: "/images/rare architect contract.png",
-      eliteImage: "/images/elite architect contract.png",
-      grandImage: "/images/grand architect contract.png",
-      simpleImage: "/images/simple architect contract.png",
-      plainImage: "/images/plain architect contract.png",
-      rareProbability: 0.7,
-      eliteProbability: 0.25,
-      grandProbability: 0.1,
-      simpleProbability: 1.0,
-      plainProbability: 1.3
-    },
-    {
-      name: "Investor's Crate",
-      itemName: "Investor's Contract",
-      rareImage: "/images/rare investor contract.png",
-      eliteImage: "/images/elite investor contract.png",
-      grandImage: "/images/grand investor contract.png",
-      simpleImage: "/images/simple investor contract.png",
-      plainImage: "/images/plain investor contract.png",
-      rareProbability: 0.85,
-      eliteProbability: 0.24,
-      grandProbability: 0.12,
-      simpleProbability: 1.0,
-      plainProbability: 1.3
-    },
-    {
-      name: "Valkyra Crate",
-      itemName: "Melee Contract",
-      rareImage: "/images/rare melee contract.png",
-      eliteImage: "/images/elite melee contract.png",
-      grandImage: "/images/grand melee contract.png",
-      simpleImage: "/images/simple melee contract.png",
-      plainImage: "/images/plain melee contract.png",
-      rareProbability: 0.7,
-      eliteProbability: 0.34,
-      grandProbability: 0.05,
-      simpleProbability: 1.0,
-      plainProbability: 1.4
-    },
-    {
-      name: "Detective Crate",
-      itemName: "Shoes Contract",
-      rareImage: "/images/rare shoe contract.png",
-      eliteImage: "/images/elite shoe contract.png",
-      grandImage: "/images/grand shoe contract.png",
-      simpleImage: "/images/simple shoe contract.png",
-      plainImage: "/images/plain shoe contract.png",
-      rareProbability: 0.71,
-      eliteProbability: 0.19,
-      grandProbability: 0.01,
-      simpleProbability: 1.0,
-      plainProbability: 1.4
-    },
-    {
-      name: "Merciless Rider Crate",
-      itemName: "Pants Contract",
-      rareImage: "/images/rare pants contract.png",
-      eliteImage: "/images/elite pants contract.png",
-      grandImage: "/images/grand pants contract.png",
-      simpleImage: "/images/simple pants contract.png",
-      plainImage: "/images/plain pants contract.png",
-      rareProbability: 0.75,
-      eliteProbability: 0.34,
-      grandProbability: 0.05,
-      simpleProbability: 1.0,
-      plainProbability: 1.5
-    },
-    {
-      name: "Narc Dealer Crate",
-      itemName: "Tops Contract",
-      rareImage: "/images/rare tops contract.png",
-      eliteImage: "/images/elite tops contract.png",
-      grandImage: "/images/grand tops contract.png",
-      simpleImage: "/images/simple tops contract.png",
-      plainImage: "/images/plain tops contract.png",
-      rareProbability: 0.81,
-      eliteProbability: 0.31,
-      grandProbability: 0.09,
-      simpleProbability: 1.0,
-      plainProbability: 1.5
-    },
-    {
-      name: "The Merc Crate",
-      itemName: "Range Contract",
-      rareImage: "/images/rare range contract.png",
-      eliteImage: "/images/elite range contract.png",
-      grandImage: "/images/grand range contract.png",
-      simpleImage: "/images/simple range contract.png",
-      plainImage: "/images/plain range contract.png",
-      rareProbability: 0.95,
-      eliteProbability: 0.24,
-      grandProbability: 0.09,
-      simpleProbability: 1.0,
-      plainProbability: 1.5
-    },
-    {
-      name: "Mob Boss Crate",
-      itemName: "Accessories Contract",
-      rareImage: "/images/rare accessories contract.png",
-      eliteImage: "/images/elite accessories contract.png",
-      grandImage: "/images/grand accessories contract.png",
-      simpleImage: "/images/simple accessories contract.png",
-      plainImage: "/images/plain accessories contract.png",
-      rareProbability: 0.84,
-      eliteProbability: 0.28,
-      grandProbability: 0.06,
-      simpleProbability: 1.0,
-      plainProbability: 1.5
-    },
-    {
-      name: "Legacy Crate",
-      itemName: "Legacy Coin",
-      rareImage: "/images/rare legacy coin.png",
-      eliteImage: "/images/elite legacy coin.png",
-      grandImage: "/images/grand legacy coin.png",
-      simpleImage: "/images/simple legacy coin.png",
-      plainImage: "/images/plain legacy coin.png",
-      rareProbability: 2.57,
-      eliteProbability: 0.96,
-      grandProbability: 1.39,
-      simpleProbability: 20.0,
-      plainProbability: 75.08,
-      isLegacy: true
-    },
-    {
-      name: "Challengers Crate",
-      itemName: "Challenger's Contract",
-      rareImage: "/images/rare challengers contract.png",
-      eliteImage: "/images/elite challengers contract.png",
-      grandImage: "/images/grand challengers contract.png",
-      simpleImage: "/images/simple challengers contract.png",
-      plainImage: "/images/plain challengers contract.png",
-      rareProbability: 1.19,
-      eliteProbability: 0.28,
-      grandProbability: 0.04,
-      simpleProbability: 1.3,
-      plainProbability: 1.5
-    },
-    {
-      name: "Godfather's Crate",
-      itemName: "Godfather's Contract",
-      rareImage: "/images/rare god father contract.png",
-      eliteImage: "/images/elite god father contract.png",
-      grandImage: "/images/grand god father contract.png",
-      simpleImage: "/images/simple god father contract.png",
-      plainImage: "/images/plain god father contract.png",
-      rareProbability: 0.26,
-      eliteProbability: 0.07,
-      grandProbability: 0.04,
-      simpleProbability: 0.7,
-      plainProbability: 1.0
-    }
-  ];
+  {
+    name: "Architect's Crate",
+    itemName: "Architect's Contract",
+    crateBoxImage: "/images/architect crate.png",
+    rareImage: "/images/rare architect contract.png",
+    eliteImage: "/images/elite architect contract.png",
+    grandImage: "/images/grand architect contract.png",
+    simpleImage: "/images/simple architect contract.png",
+    plainImage: "/images/plain architect contract.png",
+    rareProbability: 0.7,
+    eliteProbability: 0.25,
+    grandProbability: 0.1,
+    simpleProbability: 1.0,
+    plainProbability: 1.3
+  },
+  {
+    name: "Investor's Crate",
+    itemName: "Investor's Contract",
+    crateBoxImage: "/images/investor crate.png",
+    rareImage: "/images/rare investor contract.png",
+    eliteImage: "/images/elite investor contract.png",
+    grandImage: "/images/grand investor contract.png",
+    simpleImage: "/images/simple investor contract.png",
+    plainImage: "/images/plain investor contract.png",
+    rareProbability: 0.85,
+    eliteProbability: 0.24,
+    grandProbability: 0.12,
+    simpleProbability: 1.0,
+    plainProbability: 1.3
+  },
+  {
+    name: "Valkyra Crate",
+    itemName: "Melee Contract",
+    crateBoxImage: "/images/valkyra crate.png",
+    rareImage: "/images/rare melee contract.png",
+    eliteImage: "/images/elite melee contract.png",
+    grandImage: "/images/grand melee contract.png",
+    simpleImage: "/images/simple melee contract.png",
+    plainImage: "/images/plain melee contract.png",
+    rareProbability: 0.7,
+    eliteProbability: 0.34,
+    grandProbability: 0.05,
+    simpleProbability: 1.0,
+    plainProbability: 1.4
+  },
+  {
+    name: "Detective Crate",
+    itemName: "Shoes Contract",
+    crateBoxImage: "/images/detective crate.png",
+    rareImage: "/images/rare shoe contract.png",
+    eliteImage: "/images/elite shoe contract.png",
+    grandImage: "/images/grand shoe contract.png",
+    simpleImage: "/images/simple shoe contract.png",
+    plainImage: "/images/plain shoe contract.png",
+    rareProbability: 0.71,
+    eliteProbability: 0.19,
+    grandProbability: 0.01,
+    simpleProbability: 1.0,
+    plainProbability: 1.4
+  },
+  {
+    name: "Merciless Rider Crate",
+    itemName: "Pants Contract",
+    crateBoxImage: "/images/merciless rider crate.png",
+    rareImage: "/images/rare pants contract.png",
+    eliteImage: "/images/elite pants contract.png",
+    grandImage: "/images/grand pants contract.png",
+    simpleImage: "/images/simple pants contract.png",
+    plainImage: "/images/plain pants contract.png",
+    rareProbability: 0.75,
+    eliteProbability: 0.34,
+    grandProbability: 0.05,
+    simpleProbability: 1.0,
+    plainProbability: 1.5
+  },
+  {
+    name: "Narc Dealer Crate",
+    itemName: "Tops Contract",
+    crateBoxImage: "/images/narc dealer crate.png",
+    rareImage: "/images/rare tops contract.png",
+    eliteImage: "/images/elite tops contract.png",
+    grandImage: "/images/grand tops contract.png",
+    simpleImage: "/images/simple tops contract.png",
+    plainImage: "/images/plain tops contract.png",
+    rareProbability: 0.81,
+    eliteProbability: 0.31,
+    grandProbability: 0.09,
+    simpleProbability: 1.0,
+    plainProbability: 1.5
+  },
+  {
+    name: "The Merc Crate",
+    itemName: "Range Contract",
+    crateBoxImage: "/images/merc crate.png",
+    rareImage: "/images/rare range contract.png",
+    eliteImage: "/images/elite range contract.png",
+    grandImage: "/images/grand range contract.png",
+    simpleImage: "/images/simple range contract.png",
+    plainImage: "/images/plain range contract.png",
+    rareProbability: 0.95,
+    eliteProbability: 0.24,
+    grandProbability: 0.09,
+    simpleProbability: 1.0,
+    plainProbability: 1.5
+  },
+  {
+    name: "Mob Boss Crate",
+    itemName: "Accessories Contract",
+    crateBoxImage: "/images/mob boss crate.png",
+    rareImage: "/images/rare accessories contract.png",
+    eliteImage: "/images/elite accessories contract.png",
+    grandImage: "/images/grand accessories contract.png",
+    simpleImage: "/images/simple accessories contract.png",
+    plainImage: "/images/plain accessories contract.png",
+    rareProbability: 0.84,
+    eliteProbability: 0.28,
+    grandProbability: 0.06,
+    simpleProbability: 1.0,
+    plainProbability: 1.5
+  },
+  {
+    name: "Legacy Crate",
+    itemName: "Legacy Coin",
+    crateBoxImage: "/images/legacy crate.png",
+    rareImage: "/images/rare legacy coin.png",
+    eliteImage: "/images/elite legacy coin.png",
+    grandImage: "/images/grand legacy coin.png",
+    simpleImage: "/images/simple legacy coin.png",
+    plainImage: "/images/plain legacy coin.png",
+    rareProbability: 2.57,
+    eliteProbability: 0.96,
+    grandProbability: 1.39,
+    simpleProbability: 20.0,
+    plainProbability: 75.08,
+    isLegacy: true
+  },
+  {
+    name: "Challengers Crate",
+    itemName: "Challenger's Contract",
+    crateBoxImage: "/images/challenger crate.png",
+    rareImage: "/images/rare challengers contract.png",
+    eliteImage: "/images/elite challengers contract.png",
+    grandImage: "/images/grand challengers contract.png",
+    simpleImage: "/images/simple challengers contract.png",
+    plainImage: "/images/plain challengers contract.png",
+    rareProbability: 1.19,
+    eliteProbability: 0.28,
+    grandProbability: 0.04,
+    simpleProbability: 1.3,
+    plainProbability: 1.5
+  },
+  {
+    name: "Godfather's Crate",
+    itemName: "Godfather's Contract",
+    crateBoxImage: "/images/godfather crate.png",
+    rareImage: "/images/rare god father contract.png",
+    eliteImage: "/images/elite god father contract.png",
+    grandImage: "/images/grand god father contract.png",
+    simpleImage: "/images/simple god father contract.png",
+    plainImage: "/images/plain god father contract.png",
+    rareProbability: 0.26,
+    eliteProbability: 0.07,
+    grandProbability: 0.04,
+    simpleProbability: 0.7,
+    plainProbability: 1.0
+  }
+];
 
   const styles = {
     page: {
@@ -395,6 +406,32 @@ const CrateSimulator = () => {
                   <Package size={32} color="#fbbf24" />
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{crate.name}</h3>
                 </div>
+                {crate.crateBoxImage && (
+  <div style={{ 
+    width: '100%', 
+    height: '150px', 
+    display: 'flex', 
+    alignItems: 'center', 
+    justifyContent: 'center',
+    marginBottom: '1rem',
+    backgroundColor: '#111827',
+    borderRadius: '0.5rem',
+    padding: '0.5rem'
+  }}>
+    <img 
+      src={crate.crateBoxImage} 
+      alt={crate.name}
+      style={{ 
+        maxWidth: '100%', 
+        maxHeight: '100%', 
+        objectFit: 'contain'
+      }}
+      onError={(e) => {
+        e.target.style.display = 'none';
+      }}
+    />
+  </div>
+)}
                 <p style={{ color: '#9ca3af', marginBottom: '1rem' }}>{crate.itemName}</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
