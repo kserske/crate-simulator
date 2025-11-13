@@ -319,7 +319,6 @@ const CrateSimulator = () => {
 
   const rollItem = (crate) => {
     const rand = Math.random() * 100;
-    const isLegacy = crate.isLegacy;
     
     if (rand < crate.grandProbability) {
       return { rarity: 'Grand', name: crate.itemName, image: crate.grandImage };
@@ -328,10 +327,8 @@ const CrateSimulator = () => {
     } else if (rand < crate.grandProbability + crate.eliteProbability + crate.rareProbability) {
       return { rarity: 'Rare', name: crate.itemName, image: crate.rareImage };
     } else if (rand < crate.grandProbability + crate.eliteProbability + crate.rareProbability + crate.simpleProbability) {
-      const simpleName = isLegacy ? 'Simple Coin' : 'Simple Contract';
       return { rarity: 'Simple', name: crate.itemName, image: crate.simpleImage };
     } else if (rand < crate.grandProbability + crate.eliteProbability + crate.rareProbability + crate.simpleProbability + crate.plainProbability) {
-      const plainName = isLegacy ? 'Plain Coin' : 'Plain Contract';
       return { rarity: 'Plain', name: crate.itemName, image: crate.plainImage };
     } else {
       return { rarity: 'Junk', name: 'Junk Item', image: null };
