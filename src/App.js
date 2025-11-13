@@ -13,7 +13,7 @@ const CrateSimulator = () => {
   {
     name: "Architect's Crate",
     itemName: "Architect's Contract",
-    crateBoxImage: "/images/architect crate.png",
+    crateBoxImage: "/images/Architect Crate.png",
     rareImage: "/images/rare architect contract.png",
     eliteImage: "/images/elite architect contract.png",
     grandImage: "/images/grand architect contract.png",
@@ -28,7 +28,7 @@ const CrateSimulator = () => {
   {
     name: "Investor's Crate",
     itemName: "Investor's Contract",
-    crateBoxImage: "/images/investor crate.png",
+    crateBoxImage: "/images/Investor Crate.png",
     rareImage: "/images/rare investor contract.png",
     eliteImage: "/images/elite investor contract.png",
     grandImage: "/images/grand investor contract.png",
@@ -43,7 +43,7 @@ const CrateSimulator = () => {
   {
     name: "Valkyra Crate",
     itemName: "Melee Contract",
-    crateBoxImage: "/images/valkyra crate.png",
+    crateBoxImage: "/images/Valkyra Crate.png",
     rareImage: "/images/rare melee contract.png",
     eliteImage: "/images/elite melee contract.png",
     grandImage: "/images/grand melee contract.png",
@@ -58,7 +58,7 @@ const CrateSimulator = () => {
   {
     name: "Detective Crate",
     itemName: "Shoes Contract",
-    crateBoxImage: "/images/detective crate.png",
+    crateBoxImage: "/images/Detective Crate.png",
     rareImage: "/images/rare shoe contract.png",
     eliteImage: "/images/elite shoe contract.png",
     grandImage: "/images/grand shoe contract.png",
@@ -73,7 +73,7 @@ const CrateSimulator = () => {
   {
     name: "Merciless Rider Crate",
     itemName: "Pants Contract",
-    crateBoxImage: "/images/merciless rider crate.png",
+    crateBoxImage: "/images/Merciless Rider Crate.png",
     rareImage: "/images/rare pants contract.png",
     eliteImage: "/images/elite pants contract.png",
     grandImage: "/images/grand pants contract.png",
@@ -88,7 +88,7 @@ const CrateSimulator = () => {
   {
     name: "Narc Dealer Crate",
     itemName: "Tops Contract",
-    crateBoxImage: "/images/narc dealer crate.png",
+    crateBoxImage: "/images/Narc Dealer Crate.png",
     rareImage: "/images/rare tops contract.png",
     eliteImage: "/images/elite tops contract.png",
     grandImage: "/images/grand tops contract.png",
@@ -103,7 +103,7 @@ const CrateSimulator = () => {
   {
     name: "The Merc Crate",
     itemName: "Range Contract",
-    crateBoxImage: "/images/merc crate.png",
+    crateBoxImage: "/images/Merc Crate.png",
     rareImage: "/images/rare range contract.png",
     eliteImage: "/images/elite range contract.png",
     grandImage: "/images/grand range contract.png",
@@ -118,7 +118,7 @@ const CrateSimulator = () => {
   {
     name: "Mob Boss Crate",
     itemName: "Accessories Contract",
-    crateBoxImage: "/images/mob boss crate.png",
+    crateBoxImage: "/images/Mob Boss Crate.png",
     rareImage: "/images/rare accessories contract.png",
     eliteImage: "/images/elite accessories contract.png",
     grandImage: "/images/grand accessories contract.png",
@@ -133,7 +133,7 @@ const CrateSimulator = () => {
   {
     name: "Legacy Crate",
     itemName: "Legacy Coin",
-    crateBoxImage: "/images/legacy crate.png",
+    crateBoxImage: "/images/Legacy Crate.png",
     rareImage: "/images/rare legacy coin.png",
     eliteImage: "/images/elite legacy coin.png",
     grandImage: "/images/grand legacy coin.png",
@@ -149,7 +149,7 @@ const CrateSimulator = () => {
   {
     name: "Challengers Crate",
     itemName: "Challenger's Contract",
-    crateBoxImage: "/images/challenger crate.png",
+    crateBoxImage: "/images/Challenger Crate.png",
     rareImage: "/images/rare challengers contract.png",
     eliteImage: "/images/elite challengers contract.png",
     grandImage: "/images/grand challengers contract.png",
@@ -164,7 +164,7 @@ const CrateSimulator = () => {
   {
     name: "Godfather's Crate",
     itemName: "Godfather's Contract",
-    crateBoxImage: "/images/godfather crate.png",
+    crateBoxImage: "/images/Godfather Crate.png",
     rareImage: "/images/rare god father contract.png",
     eliteImage: "/images/elite god father contract.png",
     grandImage: "/images/grand god father contract.png",
